@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Knewave';
+    font-weight: 400;
+    src: url('assets/fonts/knewave-regular-webfont.woff2') format('woff2'),
+         url('assets/fonts/knewave-regular-webfont.woff') format('woff');
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-dark: hsl(274, 100%, 8%);
+    --color-med: hsl(275, 100%, 31%);
+    --color-light: hsl(284, 100%, 64%);
+    --color-transition: hsl(276, 32%, 43%);
+
+    --color-border-purple: hsl(268, 100%, 28%);
+    --color-border-blue: hsl(235, 82%, 58%);
+    --color-border-aqua: hsl(176, 100%, 50%);
+}
+
+/* Don't Have to Teach */
+img {
+    max-width: 100%;
+    pointer-events: none;
+    user-select: none;
+    object-fit: cover;
+}
+
+body {
+    background-color: var(--color-dark);
+    background: conic-gradient(from 320deg, var(--color-dark) 30%, var(--color-med), var(--color-dark), 
+                                            var(--color-med) 70%, var(--color-light), var(--color-dark));
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+}
+
+.gradient-strip {
+    background: linear-gradient(90deg, var(--color-border-purple) 23.47%, var(--color-border-blue) 56.26%, 
+                                       var(--color-border-aqua) 94.14%);
+    width: 100%;
+    text-align: center;
+}
+
+#news-title {
+    position: relative;
+}
+
+#news-title i {
+    position: absolute;
+    left: 0;
+    padding: 2.75rem 2.1rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: Knewave;
+    font-size: 6.25rem;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding-block: 2.31rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.07rem;
+    background-color: rgba(23, 0, 41, 0.42);
+}
+
+#news-feed {
+    margin-inline: 6.5rem;
+    margin-top: 4rem;
+    place-items: center;
+    place-content: center;
+}
+
+.news-item {
+    box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.15) inset, 0px 4px 50px 20px rgba(0, 0, 0, 0.15);
+    height: 100%;
+    width: 100%;
+}
+
+.news-item.headline-news {
+    height: 27.8rem;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border-radius: 2.5rem 2.5rem 0rem 0rem;
+}
+
+.news-item.headline-news > div {
+    margin: 3.7rem 3.4rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item.headline-news div h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.02rem;
+    margin-bottom: 1rem;
+}
+
+.news-item.headline-news div p {
+    font-size: 1.25rem;
+    letter-spacing: 0.01rem;
+    margin-block: 2rem;
+    line-height: 150%;
+}
+
+.news-item.headline-news div h4 {
+    font-size: 1.25rem;
+    letter-spacing: 0.01rem;
+    margin-block: 1.9rem;
+    font-weight: 600;
+}
+
+.news-item.headline-news img {
+    height: 27.8125rem;
+    width: 22.4375rem;
+    object-fit: cover;
+    border-radius: 0rem 2.5rem 0rem 0rem;
+}
+
+#back-to-top {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-inline: 6.2rem;
+    padding-bottom: 1rem;
+}
+
+#back-to-top h2 {
+    text-align: center;
+    font-size: 2.8125rem;
+    font-weight: 600;
+    padding-block: 2.5rem;
+}
+
+#back-to-top a button {
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem;
+    background-color: var(--color-light);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    margin-left: 1.2rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
